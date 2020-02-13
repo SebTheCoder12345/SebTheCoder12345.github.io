@@ -1,0 +1,102 @@
+<h1>Project NSI &ndash; 001 &ndash; Toure de Blocs</h1>
+<p>&nbsp;</p>
+<p>Auteur&nbsp;: S&eacute;bastien VELTSOS<br /> Classe de 1<sup>&egrave;re</sup> GA</p>
+<p>&nbsp;</p>
+<h2>Objectifs</h2>
+<p>D&eacute;velopper une application qui permet la simulation de la construction d&rsquo;une toure compos&eacute;e de 10 blocs rectangulaires que l&rsquo;utilisateur peut placer et d&eacute;placer &agrave; son gr&eacute;.</p>
+<p>L&rsquo;application permettra une validation visuelle ainsi que textuelle de la stabilit&eacute; de la construction propos&eacute; par l&rsquo;utilisateur.</p>
+<p>&nbsp;</p>
+<h2>Motivations</h2>
+<p>Nous avons d&eacute;cid&eacute; de faire un projet python qui a pour but d'&eacute;largir nos connaissances et notre savoir-faire dans ce langage de programmation. Nous avons &eacute;galement remarqu&eacute; qu&rsquo;avec ce langage il &eacute;tait possible de faire une interface graphique (GUI). Cela nous a donn&eacute; l&rsquo;id&eacute;e de faire une simulation. Pour trouver l&rsquo;id&eacute;e pr&eacute;cise de la simulation nous avons regard&eacute; diff&eacute;rents types d&rsquo;application mobile existantes sur le march&eacute;.</p>
+<p>&nbsp;</p>
+<h2>R&ocirc;les et responsabilit&eacute;s dans l&rsquo;&eacute;quipe</h2>
+<ul>
+<li>S&eacute;bastien &ndash; responsable de la programmation python et du rapport</li>
+<li>Amaury - responsable du lancement du projet</li>
+<li>St&eacute;fane - responsable d&rsquo;une partie de la r&eacute;daction du rapport</li>
+</ul>
+<p>Pour pouvoir travailler de chez nous, nous avons mis en place un partage de fichier sur Google Drive aux quels nous avons tous les trois acc&egrave;s.</p>
+<p>&nbsp;</p>
+<h2>Fonctionnalit&eacute;s</h2>
+<ul>
+<li>Lancer le script de l&rsquo;application</li>
+<li>Commencer la simulation</li>
+<li>Afficher les instructions</li>
+<li>Ajouter un bloc</li>
+<li>D&eacute;placer un bloc actif</li>
+<li>Confirmer la position du bloc actif</li>
+<li>Valider l&rsquo;&eacute;tat de la construction apr&egrave;s le 10<sup>&egrave;me</sup> bloc</li>
+<li>G&eacute;n&eacute;rer un rapport minimal de la construction en format texte (dans la console)</li>
+<li>Fermer / quitter l&rsquo;animation</li>
+</ul>
+<h2>Contraintes</h2>
+<ul>
+<li>Syst&egrave;me d'op&eacute;ration: Windows 7 ou + , Windows 10 v1909 recommand&eacute;</li>
+<li>Python v3.x
+<ul>
+<li>Pas de librairie pygame possible pour l'impl&eacute;mentation de ce projet</li>
+</ul>
+</li>
+<li>Taille de l'&eacute;quipe limit&eacute;e &agrave; 3 &eacute;tudiants</li>
+<li>D&eacute;lai de 4 semaines pour l'impl&eacute;mentation avec une date limite de soumission au 14 f&eacute;vrier.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Approche (Sitographie)</h2>
+<p>Nous avons d&eacute;cid&eacute; d&rsquo;utiliser les librairies python turtle , tkinter ainsi que random.</p>
+<h3>Tkinter</h3>
+<p>Nous nous servons de Tkinter pour faire les message box. Les messages box sont les messages que l&rsquo;utilisateur re&ccedil;oit comme par exemple les instructions aux lancements de l&rsquo;application.</p>
+<h3>Turtle</h3>
+<p>La librairie Turtle est tr&egrave;s utilis&eacute;e dans ce projet puisqu&rsquo; elle sert a cr&eacute;er l&rsquo;interface graphique ainsi qu&rsquo;a la cr&eacute;ation de figures (ex&nbsp;:le bloc representant la terre et le bloc de base).</p>
+<h3>Random</h3>
+<p>De plus nous avons utilis&eacute; la librairie python random pour faire en sorte de positionner le nouveau bloc &agrave; des endroits al&eacute;atoires sur l&rsquo;axe des abscisses. Enfin nous avons exp&eacute;rimente avec l&rsquo;utilisation des touches du clavier de l&rsquo;utilisateur afin d&rsquo;appeler des fonctions (droite ou gauche par exemples). Nous utilisons aussi les fonctions &lt;abs&gt; et &lt;round&gt;. &lt;Abs&gt; nous sert &agrave; prendre la valeur absolue pour la comparer de mani&egrave;re g&eacute;n&eacute;rique &agrave; des positions absolues et &lt;Round&gt; &agrave; faire des arrondis de valeurs de position.</p>
+<p>&nbsp;</p>
+<h2>Hypoth&egrave;ses &agrave; valider</h2>
+<ul>
+<li>version de python supportee est de 3.x</li>
+<li>disponibilit&eacute; du package &laquo;&nbsp;tkinter&nbsp;&raquo;</li>
+<li>disponibilit&eacute; du package &laquo;&nbsp;turtle&nbsp;&raquo;</li>
+<li>disponibilit&eacute; du package &laquo;&nbsp;random&nbsp;&raquo;</li>
+<li>r&eacute;solution de l'&eacute;cran sur lequel l&rsquo;application sera lance (min 600x600)</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Impl&eacute;mentation&nbsp;</h2>
+<ul>
+<li>Nous avons d&eacute;cid&eacute; de diff&eacute;rencier les blocs entre le bloc de la fondation &laquo;&nbsp;terre&nbsp;&raquo; , le bloc de base ou socle de la construction, le bloc actif et les blocs plac&eacute;s. Les blocs sont de diff&eacute;rentes couleurs et tailles.</li>
+<li>Les fonctions&nbsp;:</li>
+</ul>
+<p><strong><br /> def intro()</strong>&nbsp;:&nbsp; sert a envoy&eacute; un message &agrave; l&rsquo;utilisateur lui faisant part des instructions(des touches)</p>
+<p>&nbsp;</p>
+<p><strong>def dessin_rectangle_colorie(): </strong>&nbsp;&nbsp;est une fonction g&eacute;n&eacute;rique qui sert a cr&eacute;er des rectangle rempli d&rsquo;une couleur. Dans ce programme nous nous en servons pour cr&eacute;e la terre et le bloc de base compose, ainsi que des &laquo;&nbsp;briques&nbsp;&raquo; de 10 colonnes et de deux rang&eacute;es sur le bloc de base.</p>
+<p><br /> <strong>def clone_bloc():</strong> sert &agrave; cloner le bloc de r&eacute;f&eacute;rence qui est situe en dehors du champs visuelle de l&rsquo;utilisateur. </p>
+<p><strong>def droite ():</strong> sert &agrave; d&eacute;placer le bloc actif de 10 px vers la droite . Elle est activ&eacute;e lorsque l&rsquo;utilisateur appui sur &laquo;&nbsp;<strong>d</strong>&nbsp;&raquo; ou sur la fl&egrave;che qui pointe vers la droite&nbsp; &agrave;</p>
+<p><br /> <strong>def gauche ():</strong> sert &agrave; d&eacute;placer le bloc actif de 10 px vers la gauche . Elle est activ&eacute;e lorsque l&rsquo;utilisateur appui sur &laquo;&nbsp;<strong>a</strong>&nbsp;&raquo; ou sur la fl&egrave;che qui pointe vers la gauche&nbsp; &szlig;</p>
+<p>&nbsp;</p>
+<p><strong>def nouveau_bloc():</strong> sert &agrave; cr&eacute;&eacute; un nouveau bloc mais aussi a &eacute;crit les actions que l&rsquo;utilisateur a faits. Elle est activ&eacute;e lorsque l&rsquo;utilisateur appui sur &laquo;&nbsp;<strong>n</strong>&nbsp;&raquo; ou sur la touche &laquo;&nbsp;entrer&nbsp;&raquo;</p>
+<p><strong>def valider():</strong> sert &agrave; regarder la distance du bloc&nbsp; par rapport au centre. Elle est aussi responsable du changement de couleur qui a lieu lorsqu&rsquo;un bloc est situ&eacute; trop loin par rapport a la marge du centre&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>def validation():</strong> sert &agrave; faire le bilan de la stabilit&eacute; de la tour. C&rsquo;est a dire de savoir si elle stable ou pas.</p>
+<ul>
+<li>Bouton&nbsp;&laquo;&nbsp;<strong>OK</strong>&raquo; pour fermer la fen&ecirc;tre d&rsquo;instruction et acc&eacute;der a la simulation</li>
+<li>Touche &laquo;&nbsp;<strong>x</strong>&raquo; pour quitter l&rsquo;application </li>
+</ul>
+<h2>&Eacute;l&eacute;ments</h2>
+<ul>
+<li>Une fen&ecirc;tre de taille d&eacute;finie et fixe de 600px par 600 px</li>
+<li>Une fen&ecirc;tre avec&nbsp;les instructions pour chacune des touches</li>
+<li>Un bloc de base repr&eacute;sentant la terre de couleur verte</li>
+<li>Un bloc de base repr&eacute;sentant le socle ou base de la construction</li>
+<li>Un bloc standard rectangulaire de ratio 7 x 2</li>
+<li>Un bloc standard actif &agrave; la cr&eacute;ation d&rsquo;un nouveau bloc que l&rsquo;utilisateur pourra d&eacute;placer de mani&egrave;re horizontale &agrave; son gr&eacute; (dans les limites de la fen&ecirc;tre &ndash; qui lui est un clone d&rsquo;un bloc cache en dehors des limites de l&rsquo;&eacute;cran).</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Tests</h2>
+<ul>
+<li>Nombre de blocs doit &ecirc;tre inferieur ou &eacute;gale &agrave; 10</li>
+<li>Le bloc ne peut pas apparaitre en dehors de la fen&ecirc;tre</li>
+<li>Regarder si le bloc actif que l&rsquo;utilisateur d&eacute;place est totalement en dehors de la marge du centre ou pas</li>
+<li>Regarder si le nombre de bloc mal align&eacute;s est sup&eacute;rieur &agrave; 1 ou pas</li>
+</ul>
+<h1>&nbsp;</h1>
+<h1>D&eacute;veloppement th&eacute;orique</h1>
+<p>Propri&eacute;t&eacute; la&nbsp;fonction def valider():</p>
+<p>La fonction a un if dans lequel est imbriqu&eacute;e un autre if &nbsp;et un else. Elle est compos&eacute;e de deux test ainsi que deux op&eacute;rations soit de 4 op&eacute;rations &eacute;l&eacute;mentaire.</p>
