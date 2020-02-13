@@ -23,11 +23,7 @@ html  {
 	
 }	
 	
-	
-li {
-  list-style-type: upper-roman;
-  list-style-position: inside;
-}
+
 center {
   display: block;
   margin-left: auto;
